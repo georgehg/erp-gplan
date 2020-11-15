@@ -43,7 +43,7 @@ public class GeradorCompra {
             .cliente(clientes.get(idClientes.get(idx)))
             .valor(valores.get(idx))
             .data(getRandomLocalDate())
-            .qtyItens(randomizer.nextInt(10))
+            .qtyItens(randomizer.nextInt(1, 10))
             .build())
         .collect(toList());
   }

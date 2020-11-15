@@ -39,7 +39,7 @@ public class GeradorCompraTest {
 
     assertEquals(quantidade, compras.size());
     assertTrue(compras.get(0).getData().isEqual(now) || compras.get(0).getData().isAfter(now));
-    assertTrue(compras.get(4).getData().isEqual(week) || compras.get(0).getData().isBefore(week));
+    assertTrue(compras.get(4).getData().isEqual(week) || compras.get(4).getData().isBefore(week));
   }
 
 }
