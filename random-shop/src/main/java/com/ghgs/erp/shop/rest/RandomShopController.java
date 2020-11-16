@@ -20,8 +20,8 @@ public class RandomShopController {
     this.geradorCompra = geradorCompra;
   }
 
-  @GetMapping(value = "/compras", produces = MediaType.APPLICATION_JSON_VALUE)
-  public ResponseEntity<List<Compra>> getCompras(@RequestParam(value = "quantidade") Integer quantidade) {
+  @GetMapping(path = "/compras", produces = MediaType.APPLICATION_JSON_VALUE)
+  public ResponseEntity<List<Compra>> geraCompras(@RequestParam(value = "quantidade") Integer quantidade) {
     return ResponseEntity.ok(geradorCompra.geraCompra(quantidade));
   }
 

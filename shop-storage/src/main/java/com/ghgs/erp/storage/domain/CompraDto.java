@@ -8,7 +8,7 @@ import lombok.Getter;
 
 @Getter
 @EqualsAndHashCode
-@AllArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class CompraDto {
   private final ClienteDto cliente;
   private final Double valor;
