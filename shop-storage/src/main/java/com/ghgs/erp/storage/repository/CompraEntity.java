@@ -7,22 +7,32 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 @Getter
-@AllArgsConstructor(staticName = "of")
-@NoArgsConstructor(force = true)
+@EqualsAndHashCode(of = "id")
+@RequiredArgsConstructor(staticName = "of")
 @Entity
 @Table(name = "table_compras")
 public class CompraEntity {
+
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private final Long id;
+  private Long id;
+
   @ManyToOne
   private final ClienteEntity cliente;
+
   private final Double valor;
+
   private final LocalDate data;
+
   private final Integer qtyItens;
+
+  protected CompraEntity() {
+    this(null, null, null, null);
+  }
+
 }

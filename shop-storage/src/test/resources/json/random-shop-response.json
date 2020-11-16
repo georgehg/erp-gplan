@@ -1,0 +1,92 @@
+[
+  {
+    "cliente": {
+      "id": 3,
+      "nome": "Pedro"
+    },
+    "valor": 97.46518747022002,
+    "data": "2020-11-16",
+    "qtyItens": 6
+  },
+  {
+    "cliente": {
+      "id": 3,
+      "nome": "Pedro"
+    },
+    "valor": 45.82422828959894,
+    "data": "2020-11-22",
+    "qtyItens": 9
+  },
+  {
+    "cliente": {
+      "id": 9,
+      "nome": "Marcus"
+    },
+    "valor": 70.30159831164613,
+    "data": "2020-11-21",
+    "qtyItens": 2
+  },
+  {
+    "cliente": {
+      "id": 9,
+      "nome": "Marcus"
+    },
+    "valor": 52.13328574426432,
+    "data": "2020-11-19",
+    "qtyItens": 7
+  },
+  {
+    "cliente": {
+      "id": 6,
+      "nome": "Isabel"
+    },
+    "valor": 67.63681093894651,
+    "data": "2020-11-21",
+    "qtyItens": 8
+  },
+  {
+    "cliente": {
+      "id": 2,
+      "nome": "Maria"
+    },
+    "valor": 63.77694298789275,
+    "data": "2020-11-18",
+    "qtyItens": 7
+  },
+  {
+    "cliente": {
+      "id": 2,
+      "nome": "Maria"
+    },
+    "valor": 10.912506321922239,
+    "data": "2020-11-19",
+    "qtyItens": 1
+  },
+  {
+    "cliente": {
+      "id": 10,
+      "nome": "Paulo"
+    },
+    "valor": 54.28766537161227,
+    "data": "2020-11-22",
+    "qtyItens": 9
+  },
+  {
+    "cliente": {
+      "id": 4,
+      "nome": "Mateus"
+    },
+    "valor": 82.266437645126,
+    "data": "2020-11-22",
+    "qtyItens": 5
+  },
+  {
+    "cliente": {
+      "id": 7,
+      "nome": "Tomás"
+    },
+    "valor": 97.81240362344366,
+    "data": "2020-11-20",
+    "qtyItens": 1
+  }
+]

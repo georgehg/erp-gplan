@@ -1,4 +1,4 @@
-package com.ghgs.erp.bots.client;
+package com.ghgs.erp.storage.domain;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

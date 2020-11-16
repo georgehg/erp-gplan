@@ -1,21 +1,22 @@
-package com.ghgs.erp.shop.generator;
+package com.ghgs.erp.storage.domain;
 
 import java.time.LocalDate;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
-@Builder
 @Getter
 @EqualsAndHashCode
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
-@NoArgsConstructor(force = true)
-public class Compra {
-  private final Cliente cliente;
+@AllArgsConstructor(access = AccessLevel.PROTECTED)
+public class CompraDto {
+  private final ClienteDto cliente;
   private final Double valor;
   private final LocalDate data;
   private final Integer qtyItens;
+
+  protected CompraDto() {
+    this(null, null, null, null);
+  }
+
 }
