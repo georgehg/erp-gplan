@@ -1,4 +1,4 @@
-package com.ghgs.erp.gplan.controller;
+package com.ghgs.erp.shop.rest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,10 +1,10 @@
-package com.ghgs.erp.gplan;
+package com.ghgs.erp.shop;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ShopStorageApplicationTests {
+class RandomShopApplicationTests {
 
   @Test
   void contextLoads() {

@@ -1,4 +1,4 @@
-package com.ghgs.erp.gplan;
+package com.ghgs.erp.shop;
 
 import org.springframework.boot .SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

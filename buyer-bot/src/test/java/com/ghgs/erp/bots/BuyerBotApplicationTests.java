@@ -1,10 +1,10 @@
-package com.ghgs.erp.gplan;
+package com.ghgs.erp.bots;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RandomShopApplicationTests {
+class BuyerBotApplicationTests {
 
   @Test
   void contextLoads() {

@@ -1,10 +1,10 @@
-package com.ghgs.erp.gplan.generator;
+package com.ghgs.erp.shop.generator;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@AllArgsConstructor(staticName = "of")
 @Getter
+@AllArgsConstructor(staticName = "of")
 public class Cliente {
   private final Integer id;
   private final String nome;

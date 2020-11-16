@@ -1,13 +1,13 @@
-package com.ghgs.erp.gplan;
+package com.ghgs.erp.storage;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BuyerBotApplication {
+public class ShopStorageApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(BuyerBotApplication.class, args);
+    SpringApplication.run(ShopStorageApplication.class, args);
   }
 
 }

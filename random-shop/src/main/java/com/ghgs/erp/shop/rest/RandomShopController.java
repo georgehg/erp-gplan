@@ -1,7 +1,7 @@
-package com.ghgs.erp.gplan.controller;
+package com.ghgs.erp.shop.rest;
 
-import com.ghgs.erp.gplan.generator.Compra;
-import com.ghgs.erp.gplan.generator.GeradorCompra;
+import com.ghgs.erp.shop.generator.Compra;
+import com.ghgs.erp.shop.generator.GeradorCompra;
 import java.util.List;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

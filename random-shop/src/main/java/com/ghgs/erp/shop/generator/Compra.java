@@ -1,4 +1,4 @@
-package com.ghgs.erp.gplan.generator;
+package com.ghgs.erp.shop.generator;
 
 import java.time.LocalDate;
 import lombok.AccessLevel;

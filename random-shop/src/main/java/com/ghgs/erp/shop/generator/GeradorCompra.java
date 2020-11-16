@@ -1,4 +1,4 @@
-package com.ghgs.erp.gplan.generator;
+package com.ghgs.erp.shop.generator;
 
 import java.time.Instant;
 import java.time.LocalDate;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 import static java.util.stream.Collectors.toList;
 
-@Component()
+@Component
 public class GeradorCompra {
 
   private static final List<Cliente> clientes = Arrays.asList(
