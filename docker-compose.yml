@@ -1,0 +1,40 @@
+version: "3.8"
+services:
+
+  random-shop:
+    image: gplan.random-shop:latest
+    container_name: random-shop
+    ports:
+      - "8090:8090"
+    networks:
+      - erp-backend
+    deploy:
+      replicas: 1
+
+  shop-storage:
+    image: gplan.shop-storage
+    container_name: shop-storage
+    ports:
+      - "8070:8070"
+    networks:
+      - erp-backend
+    deploy:
+      replicas: 1
+
+  buyer-bot:
+    image: gplan.buyer-bot
+    container_name: buyer-bot
+    ports:
+      - "8080"
+    networks:
+      - erp-backend
+    environment:
+      SPRING_APPLICATION_JSON:
+        '{"clients": { "shop": { "host": "http://random-shop" }, "storage": { "host": "http://shop-storage" } },
+         "jobs": {"schedule": {"cron-expression": "*/30 * * * * *" },
+          "shops": {"quantity": 50} } }'
+    deploy:
+      replicas: 1
+
+networks:
+  erp-backend:
