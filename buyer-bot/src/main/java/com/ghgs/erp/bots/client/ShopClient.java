@@ -8,10 +8,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-class ShopClient implements IShopClient {
+public class ShopClient {
 
   @Value("${clients.shop.port}")
   private String shopClientPort;
@@ -22,21 +23,25 @@ class ShopClient implements IShopClient {
   @Value("${clients.shop.url}")
   private String shopClientUrl;
 
-  @Value("${clients.shop.api.shops}")
+  @Value("${clients.shop.api.generate-shops}")
   private String shopClientApi;
 
   @Autowired
   private RestTemplate restTemplate;
 
   public List<CompraDto> getCompras(Integer quantidade) {
-    String endPoint = shopClientHost + ":" + shopClientPort + shopClientUrl + String.format(shopClientApi, quantidade);
     try {
+      String endPoint = shopClientHost + ":" + shopClientPort + shopClientUrl + String.format(shopClientApi, quantidade);
       ResponseEntity<CompraDto[]> comprasResponse = restTemplate.getForEntity(endPoint, CompraDto[].class, quantidade);
       return Arrays.asList(comprasResponse.getBody());
+
     } catch (HttpClientErrorException ex) {
       throw new CouldNotGetShopListException("Error getting shop list with result " + ex);
-    }
 
+    } catch (HttpServerErrorException ex) {
+      throw new CouldNotGetShopListException("Random Shop service unavailable: " + ex);
+
+    }
   }
 
 }
