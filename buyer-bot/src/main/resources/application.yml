@@ -1,0 +1,27 @@
+server:
+  port: 8060
+
+spring:
+  application:
+    name: buyer-bot
+
+jobs:
+  schedule:
+    cronExpression: 0 */1 * * * *
+  shops:
+    quantity: 10
+
+clients:
+  shop:
+    port: 8090
+    host: http://localhost
+    url: /api/v1/random-shop
+    api:
+      generateShops: /compras?quantidade=%d
+
+  storage:
+    port: 8070
+    host: http://localhost
+    url: /api/v1/shop-store
+    api:
+      store: /compras

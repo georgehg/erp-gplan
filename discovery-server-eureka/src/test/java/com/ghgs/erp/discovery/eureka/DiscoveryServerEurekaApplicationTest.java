@@ -1,13 +1,14 @@
-package com.ghgs.erp.bots;
+package com.ghgs.erp.discovery.eureka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BuyerBotApplicationTests {
+public class DiscoveryServerEurekaApplicationTest {
 
     @Test
-    void contextLoads() {
+    public void contextLoads() {
+
     }
 
 }
